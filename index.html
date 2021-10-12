@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Converter</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="nav">
+        <h1>Upload an Image!!!</h1>
+        <input type="file" name="image" id="image" accept="image/*"/>
+        <input id="upload" type="button" onclick="myFunction()" value="Upload">
+    </div>
+    <div class="container">
+        <div id="image-display" class="image-display">
+            <img src="https://th.bing.com/th/id/R.2228e922798c97c26c2a2a86403d69c2?rik=70sLWHapZXjhUQ&riu=http%3a%2f%2ftestersdock.com%2fwp-content%2fuploads%2f2017%2f09%2ffile-upload-1280x640.png&ehk=uvBX0Z187YzskMU3g5dRDdY2iQs2qDa1GaEExOyk2cQ%3d&risl=&pid=ImgRaw&r=0" id="image" alt="upload image">
+        </div>
+        <div class="ranges">
+            <table border="2px" align="center">
+                <tr>
+                    <td>
+                        <label for="brightness">Brightness</label>
+                    </td>
+                    <td>
+                        <input type="range" name="brightness" id="brightness" min="0" max="2" step="0.1" onchange="brightness()">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="contrast">Contrast</label>
+                    </td>
+                    <td>
+                        <input type="range" name="contrast" id="contrast" min="0" max="2" step="0.1" onchange="contrast()">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="opacity">Opacity</label>
+                    </td>
+                    <td>
+                        <input type="range" name="opacity" id="opacity" min="0" max="1" step="0.1" onchange="opacity()">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="bw">Black&White</label>
+                    </td>
+                    <td>
+                        <input type="checkbox" name="bw" id="bw" onchange="bw()">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="invert">Invert</label>
+                    </td>
+                    <td>
+                        <input type="checkbox" name="invert" id="invert" onchange="invert()">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="saturation">Saturation</label>
+                    </td>
+                    <td>
+                        <input type="range" min="0" max="200" name="saturation" id="saturation" onchange="saturation()">
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <footer>Made with ❤ by Chandana Samineni</footer>
+
+</body>
+<script src="./script.js"></script>
+</html>
